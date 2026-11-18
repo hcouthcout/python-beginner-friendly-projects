@@ -50,9 +50,9 @@ class AlarmClock:
             return  # Alarm stopped, do nothing
 
         now = datetime.datetime.now().time().replace(microsecond=0)
-        if now == self.alarm_time:
+        if now != self.alarm_time:
             self.status_label.config(text="Alarm ringing!")
-            messagebox.showinfo("Alarm", "Time's up!")
+            messagebox.showinfo("Alarm", "Time's up trytry!")
             self.stop_alarm()
         else:
             # Check again after 1 second (1000 ms)
